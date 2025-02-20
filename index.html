@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta TFG</title> <!--Esto es para cambiar el titulo de la web en la pestana-->
+
+
+<!--Estilos CSS-->
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; /* Arial */
+            display: flex; /* Centrar contenido... */
+            flex-direction: column; /* ... en columna */
+            justify-content: center;  /* Alineando al centro */
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4; /* Color de fondo, cambiar en hexadecimal! */
+            text-align: center;
+            padding: 20px;
+        }
+        #contenedor {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        
+        h1 { /* Estilo para el encabezado */
+            font-size: 28px; /* Tamano */
+            color: #333; /* Color */
+            margin-bottom: 10px;
+            
+        }
+        p { /* Igual pero para el parafo */
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        #cuestionario a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+        #cuestionario a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="contenedor">
+        <h1>Encuesta TFG: ¿La pobreza fortalece? Creencias sobre resiliencia y su impacto en la redistribución</h1> <!--Encabezado-->>
+        <p>Muchas gracias por su colaboración</p> <!--Texto de debajo-->>
+        <div id="cuestionario">
+            <a id="linkEncuesta" href="#" target="_blank">Enlace a la encuesta</a> <!--Texto del enlace-->>
+        </div>
+    </div>
+
+    <script>
+        const cuestionarios = [ 
+            "https://docs.google.com/forms/d/e/1FAIpQLScGrptulc_SvAlQX3yFRyGSjwF8KXtzWxzy_pZXLrHhqKJYug/viewform?usp=header",
+            "https://docs.google.com/forms/d/e/1FAIpQLSdsDZLnM47jgV2q-s-U2gKrLq0lKUA3XszSI6cPB5eNnGkHCQ/viewform?usp=dialog"
+        ];/* Los cuestionarios. Si se cambia alguno, se cambia aqui. Si se quiere cambiar el ratio, se duplica el que se quiera */
+
+        const urlAleatoria = cuestionarios[Math.floor(Math.random() * cuestionarios.length)]; /* Eleccion aleatoria */
+        document.getElementById("linkEncuesta").href = urlAleatoria;
+    </script>
+
+</body>
+</html>
